@@ -5,5 +5,5 @@
 # Skillator
 An Offline Mobile Learning Application for Grade 12 - ICT Students at Arellano University Jose Abad Santos 
 
-##Downloads
+## Downloads
 [Development Build](https://github.com/idntknwlouis/skillator/releases/download/v0.0.1/Skillator-Development-Android.apk)
