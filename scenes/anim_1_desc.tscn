@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0nc5yga45hfc"]
+
+[ext_resource type="Script" path="res://scripts/anim_1_desc.gd" id="1_k40h4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igvnq"]
+content_margin_left = 25.0
+content_margin_top = 10.0
+content_margin_right = 25.0
+content_margin_bottom = 15.0
+bg_color = Color(0.465479, 0.599962, 0.84858, 1)
+border_width_bottom = 6
+border_color = Color(0.311918, 0.461167, 0.781952, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+
+[sub_resource type="Theme" id="Theme_k40h4"]
+Button/styles/normal = SubResource("StyleBoxFlat_igvnq")
+
+[node name="Animation 1 Description" type="Node"]
+script = ExtResource("1_k40h4")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.5
+offset_top = -219.0
+offset_right = 195.5
+offset_bottom = -132.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "What does the
+Animation 1 Subject cover?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = -35.0
+offset_right = 120.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "(brief or detailed description
+about the subject)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="previous" type="Button" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 64.0
+theme = SubResource("Theme_k40h4")
+text = "Previous"
+
+[connection signal="pressed" from="previous" to="." method="_on_previous_pressed"]

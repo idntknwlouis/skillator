@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3 uid="uid://by5ixbpi0i26"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_w7alg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qn3kn"]
+content_margin_left = 25.0
+content_margin_top = 10.0
+content_margin_right = 25.0
+content_margin_bottom = 15.0
+bg_color = Color(0.465479, 0.599962, 0.84858, 1)
+border_width_bottom = 6
+border_color = Color(0.311918, 0.461167, 0.781952, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+
+[sub_resource type="Theme" id="Theme_xips3"]
+Button/styles/normal = SubResource("StyleBoxFlat_qn3kn")
+
+[node name="mainmenu" type="Node"]
+script = ExtResource("1_w7alg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -27.0
+offset_right = 144.0
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="play" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_xips3")
+theme_override_font_sizes/font_size = 25
+text = "Start Learning"
+metadata/_edit_use_anchors_ = true
+
+[node name="settings" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_xips3")
+theme_override_font_sizes/font_size = 25
+text = "Settings"
+metadata/_edit_use_anchors_ = true
+
+[node name="quit" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"FlatButton"
+theme_override_font_sizes/font_size = 20
+text = "QUIT"
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -200.0
+offset_right = 80.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Skillator"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -155.0
+offset_right = 64.0
+offset_bottom = -138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "(placeholder text)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/play" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/settings" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

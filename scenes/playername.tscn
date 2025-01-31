@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1rcyxp3k67hm"]
+
+[ext_resource type="Script" path="res://scripts/playername.gd" id="1_xfj87"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b03vg"]
+content_margin_left = 25.0
+content_margin_top = 10.0
+content_margin_right = 25.0
+content_margin_bottom = 15.0
+bg_color = Color(0.465479, 0.599962, 0.84858, 1)
+border_width_bottom = 6
+border_color = Color(0.311918, 0.461167, 0.781952, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+
+[sub_resource type="Theme" id="Theme_xfj87"]
+Button/styles/normal = SubResource("StyleBoxFlat_b03vg")
+
+[node name="Input Username" type="Node"]
+script = ExtResource("1_xfj87")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -91.0
+offset_right = 160.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "Whats your name?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -20.0
+offset_right = 144.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Enter your name here"
+alignment = 1
+
+[node name="enter" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = 61.0
+offset_right = 136.0
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme = SubResource("Theme_xfj87")
+theme_override_font_sizes/font_size = 20
+text = "Enter"
+
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="enter" to="." method="_on_enter_pressed"]

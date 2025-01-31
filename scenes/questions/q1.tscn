@@ -1,0 +1,199 @@
+[gd_scene load_steps=5 format=3 uid="uid://5d3v3jrkder4"]
+
+[ext_resource type="Script" path="res://scenes/questions/q_scripts/q_scripts.gd" id="1_oy4es"]
+[ext_resource type="Script" path="res://scenes/questions/q_scripts/answer_correct.gd" id="2_0q1g1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2we08"]
+content_margin_left = 25.0
+content_margin_top = 10.0
+content_margin_right = 25.0
+content_margin_bottom = 15.0
+bg_color = Color(0.465479, 0.599962, 0.84858, 1)
+border_width_bottom = 6
+border_color = Color(0.311918, 0.461167, 0.781952, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 5
+
+[sub_resource type="Theme" id="Theme_k40h4"]
+Button/styles/normal = SubResource("StyleBoxFlat_2we08")
+
+[node name="q1" type="Node"]
+script = ExtResource("1_oy4es")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -379.0
+offset_right = 199.0
+offset_bottom = -292.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Question 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -83.0
+offset_right = 191.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 171
+
+[node name="Label3" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -211.0
+offset_right = 162.0
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "Lorem ipsum"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="menu" type="Button" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 111.0
+offset_bottom = 64.0
+theme = SubResource("Theme_k40h4")
+text = "Menu"
+
+[node name="q1answer1" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = 173.0
+offset_right = 128.0
+offset_bottom = 221.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_k40h4")
+text = "Answer 1"
+
+[node name="q1answer2" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = 253.0
+offset_right = 128.0
+offset_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_k40h4")
+text = "Answer 2"
+
+[node name="Correct" type="CanvasLayer" parent="."]
+script = ExtResource("2_0q1g1")
+
+[node name="Panel" type="Panel" parent="Correct"]
+offset_top = 704.0
+offset_right = 480.0
+offset_bottom = 856.0
+
+[node name="Label" type="Label" parent="Correct"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 301.0
+offset_right = 56.0
+offset_bottom = 332.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 22
+text = "Correct!
+"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="continue" type="Button" parent="Correct"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = 341.0
+offset_right = 112.0
+offset_bottom = 389.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_k40h4")
+theme_override_font_sizes/font_size = 16
+text = "Continue"
+icon_alignment = 1
+
+[node name="continue2" type="Button" parent="Correct"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = 341.0
+offset_right = 112.0
+offset_bottom = 389.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_k40h4")
+theme_override_font_sizes/font_size = 16
+text = "Continue"
+icon_alignment = 1
+
+[node name="continue3" type="Button" parent="Correct"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = 341.0
+offset_right = 112.0
+offset_bottom = 389.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_k40h4")
+theme_override_font_sizes/font_size = 16
+text = "Continue"
+icon_alignment = 1
+
+[connection signal="pressed" from="menu" to="." method="_on_previous_pressed"]
+[connection signal="pressed" from="q1answer1" to="." method="_on_q_1_answer_1_pressed"]
+[connection signal="pressed" from="q1answer2" to="." method="_on_q_1_answer_2_pressed"]
+[connection signal="pressed" from="Correct/continue" to="Correct" method="_on_continue_pressed"]
+[connection signal="pressed" from="Correct/continue2" to="Correct" method="_on_continue_2_pressed"]
+[connection signal="pressed" from="Correct/continue3" to="Correct" method="_on_continue_3_pressed"]
