@@ -8,4 +8,5 @@ An Offline Mobile Learning Application for Grade 12 - ICT Students at Arellano U
 ## Downloads
 [Development Build](https://github.com/idntknwlouis/skillator/releases/download/v0.0.1/Skillator-Development-Android.apk)
 
-New! [Alpha Build](https://github.com/idntknwlouis/skillator/releases/download/v1.0-alpha/Skillator-Alpha1.0.apk)
+New!
+[Alpha Build](https://github.com/idntknwlouis/skillator/releases/download/v1.0-alpha/Skillator-Alpha1.0.apk)
